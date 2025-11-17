@@ -42,17 +42,17 @@ namespace RestaurantOrderingSystem
             menuManager.AddMenuItem(drink6);
             menuManager.PrintMenu();
 
-            Order order1 = new Order(3);
+            Order order1 = new Order(3, 1021);
+            orderManager.AddOrder(order1);
             order1.AddMenuItem(drink2);
             order1.AddMenuItem(dish3);
             order1.AddMenuItem(dish4);
             order1.RemoveMenuItem(dish3);
             order1.CalculateOrder();
             order1.StatusOfOrder();
-            orderManager.AddOrder(order1);
-            orderManager.AddOrderMenu(dish1);
+            
 
-            Order order2 = new Order(5);
+            Order order2 = new Order(5, 1034);
             orderManager.AddOrder(order2);
             order2.AddMenuItem(drink5);
             order2.AddMenuItem(dish3);
@@ -66,7 +66,7 @@ namespace RestaurantOrderingSystem
             search.FindByName("Суп гороховий");
             search.FindByType(TypeOfDish.First);
             search.FindByType(TypeOfDish.Dessert);
-            search.FindById(1);
+            search.FindById(1034);
 
         }
     }

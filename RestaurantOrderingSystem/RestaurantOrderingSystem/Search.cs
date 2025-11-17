@@ -85,9 +85,9 @@ namespace RestaurantOrderingSystem
             else
             {
                 Console.WriteLine();
-                foreach (var item in orders)
+                foreach (var item in needOrder)
                 {
-                    item.PrintStatus(); Console.WriteLine();
+                    item.PrintOrder(); Console.WriteLine();
                 }
             }
             return needOrder;

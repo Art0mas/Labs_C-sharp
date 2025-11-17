@@ -35,10 +35,10 @@ namespace RestaurantOrderingSystem
             }
         }
         private List<Menu> _orderItem = new List<Menu>();
-        public Order(int tableNumber)
+        public Order(int tableNumber, int id)
         {
             TableNumber = tableNumber;
-            Id += 1;
+            Id = id;
             //Random rand = new Random();
             //Id = rand.Next(1000, 9999);
             Status = Status.New;
@@ -86,7 +86,7 @@ namespace RestaurantOrderingSystem
             if(Status == Status.Paid) Console.WriteLine($"Статус оновлено: {Status}\n");
         }
 
-        public void PrintStatus()
+        public void PrintOrder()
         {
 
             Console.Write($"ID: {this.Id} | Стіл: {this.TableNumber} | Меню: ");

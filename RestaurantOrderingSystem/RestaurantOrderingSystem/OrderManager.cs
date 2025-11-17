@@ -9,17 +9,12 @@ namespace RestaurantOrderingSystem
     public class OrderManager
     {
         private List<Order> orders = new List<Order>();
-        private List<Menu> menu = new List<Menu>();
 
         public void AddOrder(Order order)
         {
             orders.Add(order);
         }
 
-        public void AddOrderMenu(Menu menuItems)
-        {
-            menu.Add(menuItems);
-        }
         public List<Order> GetOrders() 
         {
             return orders; 
