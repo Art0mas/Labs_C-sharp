@@ -27,7 +27,7 @@ namespace RestaurantOrderingSystem
             }
             if (needMenuItem.Count == 0)
             {
-                Console.WriteLine($"{name} не знайдено");
+                Console.WriteLine($"Позицію '{name}' не знайдено");
             }
             else
             {

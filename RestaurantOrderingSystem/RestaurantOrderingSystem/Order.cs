@@ -15,6 +15,7 @@ namespace RestaurantOrderingSystem
     }
     public class Order
     {
+        private static int _nextId = 1;
         public int Id { get; private set; }
         public Status Status { get; private set;}
         public decimal Sum { get; private set; }
@@ -35,12 +36,10 @@ namespace RestaurantOrderingSystem
             }
         }
         private List<Menu> _orderItem = new List<Menu>();
-        public Order(int tableNumber, int id)
+        public Order(int tableNumber)
         {
             TableNumber = tableNumber;
-            Id = id;
-            //Random rand = new Random();
-            //Id = rand.Next(1000, 9999);
+            Id = _nextId++;
             Status = Status.New;
             Console.WriteLine($"\nСтворено нове замовлення #{Id} для столика №{TableNumber}");
         }
