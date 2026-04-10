@@ -1,0 +1,11 @@
+﻿namespace Task4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            OrderManager orderManager = new OrderManager();
+            orderManager.Run();
+        }
+    }
+}
